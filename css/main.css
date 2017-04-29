@@ -22,6 +22,12 @@ body {
 
 #madLibOutput {
     height: 75%;
+    padding-left: 10px;
+}
+
+#madLibOutput p {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .panel {
