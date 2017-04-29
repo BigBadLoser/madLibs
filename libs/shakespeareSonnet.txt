@@ -1,28 +1,27 @@
-Shall I compare thee to a $adj1 $noun1 
+Shall I compare thee to a $adj1 $noun1 </p>
 
-Thou art more $noun2 and more $adj2
+<p>Thou art more $noun2 and more $adj2 </p>
 
-$adj3 $noun3 do $verb1 the darling $noun4 of May. 
+<p>$adj3 $noun3 do $verb1 the darling $noun4 of May. </p>
 
-And summer’s $noun5 hath all too short a $bodyPart1 
+<p>And summer’s $noun5 hath all too short a $bodyPart1 </p>
 
-Sometimes too $adj4 the $bodyPart2 of $location1 shines. 
+<p>Sometimes too $adj4 the $bodyPart2 of $location1 shines. </p>
 
-And often is his $color1 $noun5 dimm’d. 
+<p>And often is his $color1 $noun5 dimm’d. </p>
 
-And every $location2 from $location3 sometimes declines. 
+<p>And every $location2 from $location3 sometimes declines. </p>
 
-By chance, or nature’s changing $noun7, un- $verb2 ed. 
+<p>By chance, or nature’s changing $noun7, un- $verb2 ed. </p>
 
-But thy eternal $noun7 shall not $verb3 
+<p>But thy eternal $noun7 shall not $verb3 </p>
 
-Nor lose possession of that fair $noun9 thou owst’. 
+<p>Nor lose possession of that fair $noun9 thou owst’. </p>
 
-Nor shall $celebrity1 brag thou wander’st in his $bodyPart2
+<p>Nor shall $celebrity1 brag thou wander’st in his $bodyPart2</p>
 
-When in $adj5 $noun10 to time thou grow’st. 
+<p>When in $adj5 $noun10 to time thou grow’st. </p>
 
-So long as $livingThing1 s can $verb4 or $livingThing2 s can $verb5
+<p>So long as $livingThing1 s can $verb4 or $livingThing2 s can $verb5</p>
 
-So long lives this, and this gives life to thee. 
-
+<p>So long lives this, and this gives life to thee. 

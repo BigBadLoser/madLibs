@@ -12,6 +12,7 @@ var shakespeareSonnet = {
     celebrities: 1,
     livingThings: 2,
     colors: 1,
+    filePath: "https://preview.c9users.io/bigbadloser/madlibs/libs/shakespeareSonnet.txt",
     title: "SHAKESPEARE SONNET 18",
     getOutput: function(){
         return "testMeDaddy";
@@ -57,11 +58,13 @@ function createInputArray(lib){
 function setInput(lib){
     inputOptions.innerHTML = createInputArray(lib).join("");
 }
-function outputLib(lib){
-    madLibOutput.innerHTML = lib.getOutput();
+function outputLib(){
+    var output = getOutput(currentLib);
+    madLibOutput.innerHTML = output;
+    
 }
 function onButtonClick(lib) {
-    outputLib(lib);
+    currentLib = lib;
     setInput(lib);
 }
 
@@ -74,4 +77,34 @@ function readStringFromFileAtPath(pathOfFileToReadFrom)
         var returnValue = request.responseText;
         return returnValue;
     }
-var outputLibFromTextFile = readStringFromFileAtPath ( "/libs/shakespeareSonnet.txt" );
+    
+function getOutput(lib){
+    var txt = readStringFromFileAtPath (lib.filePath);
+    for(var i = 1; i < lib.nouns; i++){
+        txt = txt.replace("$noun" + i, document.getElementById("noun" + i).value);
+    }
+    for(var i = 1; i < lib.adjectives; i++){
+        txt = txt.replace("$adj" + i, document.getElementById("adjective" + i).value);
+    }
+    for(var i = 1; i < lib.verbs; i++){
+        txt = txt.replace("$verb" + i, document.getElementById("verb" + i).value);
+    }
+    for(var i = 1; i < lib.colors; i++){
+        txt = txt.replace("$color" + i, document.getElementById("color" + i).value);
+    }
+    for(var i = 1; i < lib.bodyParts; i++){
+        txt = txt.replace("$bodyPart" + i, document.getElementById("bodyPart" + i).value);
+    }
+    for(var i = 1; i < lib.celebrities; i++){
+        txt = txt.replace("$celebrity" + i, document.getElementById("celebrity" + i).value);
+    }
+    for(var i = 1; i < lib.livingThings; i++){
+        txt = txt.replace("$livingThing" + i, document.getElementById("livingThing" + i).value);
+    }
+    for(var i = 1; i < lib.locations; i++){
+        txt = txt.replace("$location" + i, document.getElementById("location" + i).value);
+    }
+    return txt;
+}    
+
+
