@@ -16,7 +16,7 @@ var shakespeareSonnet = {
     exclamations: 0,
     monsters: 0,
     clothing: 0,
-    filePath: "https://bigbadloser.github.io/madlibs/libs/shakespeareSonnet.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/shakespeareSonnet.txt"
+    filePath: "/libs/shakespeareSonnet.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/shakespeareSonnet.txt"
     title: "SHAKESPEARE SONNET 18",
 };
 //1 household item, 4 verb, 1 adj., 2 noun, 1 article of clothing, 3 body part, 1 exclamation, 
@@ -33,7 +33,7 @@ var coolestGirl = {
     exclamations: 1,
     monsters: 0,
     clothing: 1,
-    filePath: "https://bigbadloser.github.io/madlibs/libs/coolestGirl.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/coolestGirl.txt"
+    filePath: "libs/coolestGirl.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/coolestGirl.txt"
     title: "How To Date the Coolest Girl in School",
 };
 //6 noun/s, 4 verb-ing, 4 body part/s, 1 monster, 1 exclamation 
@@ -50,7 +50,7 @@ var afraid = {
     exclamations: 1,
     monsters: 1,
     clothing: 0,
-    filePath: "https://bigbadloser.github.io/madlibs/libs/afraid.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/afraid.txt"
+    filePath: "/libs/afraid.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/afraid.txt"
     title: "Afraid of the Dark",
 };
 function createInputArray(lib){
