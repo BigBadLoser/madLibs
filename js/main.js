@@ -12,7 +12,7 @@ var shakespeareSonnet = {
     celebrities: 1,
     livingThings: 2,
     colors: 1,
-    filePath: "https://preview.c9users.io/bigbadloser/madlibs/libs/shakespeareSonnet.txt",
+    filePath: "bigbadloser.github.io/madLibs/libs/shakespeareSonnet.txt", //VERY IMPORTANT, CHANGE THIS BEFORE COMMITING TO GITHUB!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     title: "SHAKESPEARE SONNET 18",
 };
 function createInputArray(lib){
