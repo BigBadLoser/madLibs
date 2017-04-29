@@ -8,17 +8,17 @@ Shall I compare thee to a $adj1 $noun1 </p>
 
 <p>Sometimes too $adj4 the $bodyPart2 of $location1 shines. </p>
 
-<p>And often is his $color1 $noun5 dimm’d. </p>
+<p>And often is his $color1 $noun6 dimm’d. </p>
 
 <p>And every $location2 from $location3 sometimes declines. </p>
 
 <p>By chance, or nature’s changing $noun7, un- $verb2 ed. </p>
 
-<p>But thy eternal $noun7 shall not $verb3 </p>
+<p>But thy eternal $noun8 shall not $verb3 </p>
 
 <p>Nor lose possession of that fair $noun9 thou owst’. </p>
 
-<p>Nor shall $celebrity1 brag thou wander’st in his $bodyPart2</p>
+<p>Nor shall $celebrity1 brag thou wander’st in his $bodyPart3</p>
 
 <p>When in $adj5 $noun10 to time thou grow’st. </p>
 

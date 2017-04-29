@@ -3,8 +3,7 @@ var inputOptions = document.getElementById("inputOptions");
 var currentLib;
 // '<input type="text" class="form-control" placeholder="Verb">'
 var shakespeareSonnet = {
-    //6 adj, 7 noun, 3 body parts, 2 locations, 4 verbs, 1 celebrity, 2 living things
-    verbs: 4,
+    verbs: 5,
     nouns: 10,
     adjectives: 6,
     bodyParts: 3,
@@ -72,27 +71,26 @@ function getOutput(lib){
     var txt = readStringFromFileAtPath (lib.filePath);
     for(var i = 1; i <= 10; i++){
         txt = txt.replace("$noun" + i, document.getElementById("noun" + i).value);
-        console.error(i);
     }
-    for(var i = 1; i < lib.adjectives; i++){
+    for(var i = 1; i <= lib.adjectives; i++){
         txt = txt.replace("$adj" + i, document.getElementById("adjective" + i).value);
     }
-    for(var i = 1; i < lib.verbs; i++){
+    for(var i = 1; i <= lib.verbs; i++){
         txt = txt.replace("$verb" + i, document.getElementById("verb" + i).value);
     }
-    for(var i = 1; i < lib.colors; i++){
+    for(var i = 1; i <= lib.colors ; i++){
         txt = txt.replace("$color" + i, document.getElementById("color" + i).value);
     }
-    for(var i = 1; i < lib.bodyParts; i++){
+    for(var i = 1; i <= lib.bodyParts; i++){
         txt = txt.replace("$bodyPart" + i, document.getElementById("bodyPart" + i).value);
     }
-    for(var i = 1; i < lib.celebrities; i++){
+    for(var i = 1; i <= lib.celebrities; i++){
         txt = txt.replace("$celebrity" + i, document.getElementById("celebrity" + i).value);
     }
-    for(var i = 1; i < lib.livingThings ; i++){
+    for(var i = 1; i <= lib.livingThings ; i++){
         txt = txt.replace("$livingThing" + i, document.getElementById("livingThing" + i).value);
     }
-    for(var i = 1; i < lib.locations ; i++){
+    for(var i = 1; i <= lib.locations ; i++){
         txt = txt.replace("$location" + i, document.getElementById("location" + i).value);
     }
     return txt;
