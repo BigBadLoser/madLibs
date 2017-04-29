@@ -36,7 +36,6 @@ var coolestGirl = {
     filePath: "libs/coolestGirl.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/coolestGirl.txt"
     title: "How To Date the Coolest Girl in School",
 };
-//6 noun/s, 4 verb-ing, 4 body part/s, 1 monster, 1 exclamation 
 var afraid = {
     verbs: 4,
     nouns: 6,
