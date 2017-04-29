@@ -23,11 +23,13 @@
   </head>
   <body>
     <div class="container-fluid text-center">
+      <h1 class="hidden-xs">Mad Libs</h1>
       <div class="row">
         <div class="col-md-3">
           <div class="panel panel-primary">
-            <div class="panel-heading">Mad Lib Selector</div>
-            <div class="form-group">
+            <div class="panel-heading">Word Input</div>
+            <button type="button" class="btn btn-default form-control">Generate Random</button>
+            <div class="form-group" id="inputOptions">
               <input type="text" class="form-control" placeholder="Text input">
               <input type="text" class="form-control" placeholder="Text input">
               <input type="text" class="form-control" placeholder="Text input">
@@ -35,12 +37,12 @@
           </div>
         </div>
         <div class="col-md-3">
-           <div class="panel panel-primary buttonPanelPadding wordInput">
-            <div class="panel-heading test">Word Input</div>
+           <div class="panel panel-primary ">
+            <div class="panel-heading test">Mad Lib Selector</div>
             <div class="btn-group-vertical" role="group">
-              <button type="button" class="btn btn-default">Mr Memes Wacky Adventure</button>
-              <button type="button" class="btn btn-default">I'm really gay</button>
-              <button type="button" class="btn btn-default">The Trials and Tribulations of Humphrey Goddard</button>
+              <button type="button" class="btn btn-default" onclick="onButtonClick(shakespeareSonnet)" id="shakespeareSonnet">Shakespeare Sonnet 18</button>
+              <button type="button" class="btn btn-default" onclick="onButtonClick(imGay)">I'm really gay</button>
+              <button type="button" class="btn btn-default" onclick="">The Trials and Tribulations of aa</button> <!-- This is as long as they should ever get -->
               <button type="button" class="btn btn-default">Mad Lib 4</button>
               <button type="button" class="btn btn-default">Mad Lib 5</button>
             </div>
