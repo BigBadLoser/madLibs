@@ -5,49 +5,41 @@ var currentLib;
 var shakespeareSonnet = {
     //6 adj, 7 noun, 3 body parts, 2 locations, 4 verbs, 1 celebrity, 2 living things
     verbs: 4,
-    nouns: 7,
+    nouns: 10,
     adjectives: 6,
     bodyParts: 3,
     locations: 3,
     celebrities: 1,
     livingThings: 2,
     colors: 1,
-    filePath: "https://bigbadloser.github.io/madLibs/libs/shakespeareSonnet.txt", //VERY IMPORTANT, CHANGE THIS BEFORE COMMITING TO GITHUB!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    filePath: "https://preview.c9users.io/bigbadloser/madlibs/libs/shakespeareSonnet.txt", //VERY IMPORTANT, CHANGE THIS BEFORE COMMITING TO GITHUB!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     title: "SHAKESPEARE SONNET 18",
 };
 function createInputArray(lib){
     var inputOptionsA = [];
-    for (var i = 0; i < lib.verbs; i++){
-        var iPlus = i + 1;
-        inputOptionsA.push('<input type="text" class="form-control" placeholder="Verb' + ' ' + iPlus + '"' + 'id="verb' + i + '">');
+    for (var i = 1; i <= lib.verbs; i++){
+        inputOptionsA.push('<input type="text" class="form-control" placeholder="Verb' + ' ' + i + '"' + 'id="verb' + i + '">');
     }
-    for (var i = 0; i < lib.nouns; i++){
-        var iPlus = i + 1;
-        inputOptionsA.push('<input type="text" class="form-control" placeholder="Noun' + ' ' + iPlus + '"' + 'id="noun' + i + '">');
+    for (var i = 1; i <= lib.nouns; i++){
+        inputOptionsA.push('<input type="text" class="form-control" placeholder="Noun' + ' ' + i + '"' + 'id="noun' + i + '">');
     }
-    for (var i = 0; i < lib.adjectives; i++){
-        var iPlus = i + 1;
-        inputOptionsA.push('<input type="text" class="form-control" placeholder="Adjective' + ' ' + iPlus + '"' + 'id="adjective' + i + '">');
+    for (var i = 1; i <= lib.adjectives; i++){
+        inputOptionsA.push('<input type="text" class="form-control" placeholder="Adjective' + ' ' + i + '"' + 'id="adjective' + i + '">');
     }
-    for (var i = 0; i < lib.bodyParts; i++){
-        var iPlus = i + 1;
-        inputOptionsA.push('<input type="text" class="form-control" placeholder="Body Part' + ' ' + iPlus + '"' + 'id="bodyPart' + i + '">');
+    for (var i = 1; i <= lib.bodyParts; i++){
+        inputOptionsA.push('<input type="text" class="form-control" placeholder="Body Part' + ' ' + i + '"' + 'id="bodyPart' + i + '">');
     }
-    for (var i = 0; i < lib.locations; i++){
-        var iPlus = i + 1;
-        inputOptionsA.push('<input type="text" class="form-control" placeholder="Location' + ' ' + iPlus + '"' + 'id="location' + i + '">');
+    for (var i = 1; i <= lib.locations; i++){
+        inputOptionsA.push('<input type="text" class="form-control" placeholder="Location' + ' ' + i + '"' + 'id="location' + i + '">');
     }
-    for (var i = 0; i < lib.celebrities; i++){
-        var iPlus = i + 1;
-        inputOptionsA.push('<input type="text" class="form-control" placeholder="Celebrity' + ' ' + iPlus + '"' + 'id="celebrities' + i + '">');
+    for (var i = 1; i <= lib.celebrities; i++){
+        inputOptionsA.push('<input type="text" class="form-control" placeholder="Celebrity' + ' ' + i + '"' + 'id="celebrity' + i + '">');
     }
-    for (var i = 0; i < lib.livingThings; i++){
-        var iPlus = i + 1;
-        inputOptionsA.push('<input type="text" class="form-control" placeholder="Living Thing' + ' ' + iPlus + '"' + 'id="livingThing' + i + '">');
+    for (var i = 1; i <= lib.livingThings; i++){
+        inputOptionsA.push('<input type="text" class="form-control" placeholder="Living Thing' + ' ' + i + '"' + 'id="livingThing' + i + '">');
     }
-    for (var i = 0; i < lib.livingThings; i++){
-        var iPlus = i + 1;
-        inputOptionsA.push('<input type="text" class="form-control" placeholder="Color' + ' ' + iPlus + '"' + 'id="color' + i + '">');
+    for (var i = 1; i <= lib.livingThings; i++){
+        inputOptionsA.push('<input type="text" class="form-control" placeholder="Color' + ' ' + i + '"' + 'id="color' + i + '">');
     }
     return inputOptionsA;
 }
@@ -63,6 +55,7 @@ function outputLib(){
 function onButtonClick(lib) {
     currentLib = lib;
     setInput(lib);
+    console.error(createInputArray(currentLib));
 }
 
 //document.getElementById("searchTxt").value;
@@ -77,8 +70,9 @@ function readStringFromFileAtPath(pathOfFileToReadFrom)
     
 function getOutput(lib){
     var txt = readStringFromFileAtPath (lib.filePath);
-    for(var i = 1; i < lib.nouns; i++){
+    for(var i = 1; i <= 10; i++){
         txt = txt.replace("$noun" + i, document.getElementById("noun" + i).value);
+        console.error(i);
     }
     for(var i = 1; i < lib.adjectives; i++){
         txt = txt.replace("$adj" + i, document.getElementById("adjective" + i).value);
@@ -95,13 +89,11 @@ function getOutput(lib){
     for(var i = 1; i < lib.celebrities; i++){
         txt = txt.replace("$celebrity" + i, document.getElementById("celebrity" + i).value);
     }
-    for(var i = 1; i < lib.livingThings; i++){
+    for(var i = 1; i < lib.livingThings ; i++){
         txt = txt.replace("$livingThing" + i, document.getElementById("livingThing" + i).value);
     }
-    for(var i = 1; i < lib.locations; i++){
+    for(var i = 1; i < lib.locations ; i++){
         txt = txt.replace("$location" + i, document.getElementById("location" + i).value);
     }
     return txt;
 }    
-
-
