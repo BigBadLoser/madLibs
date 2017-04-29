@@ -16,7 +16,7 @@ var shakespeareSonnet = {
     exclamations: 0,
     monsters: 0,
     clothing: 0,
-    filePath: "/libs/shakespeareSonnet.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/shakespeareSonnet.txt"
+    filePath: "libs/shakespeareSonnet.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/shakespeareSonnet.txt"
     title: "SHAKESPEARE SONNET 18",
 };
 //1 household item, 4 verb, 1 adj., 2 noun, 1 article of clothing, 3 body part, 1 exclamation, 
@@ -50,7 +50,7 @@ var afraid = {
     exclamations: 1,
     monsters: 1,
     clothing: 0,
-    filePath: "/libs/afraid.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/afraid.txt"
+    filePath: "libs/afraid.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/afraid.txt"
     title: "Afraid of the Dark",
 };
 function createInputArray(lib){
