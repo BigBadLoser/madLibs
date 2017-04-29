@@ -3,6 +3,8 @@ var inputOptions = document.getElementById("inputOptions");
 var ou = document.querySelector("#madLibOutput");
 var currentLib;
 // '<input type="text" class="form-control" placeholder="Verb">'
+
+//Instead of 0, I should really just check if they have a value at all during my loops, but oh well.
 var shakespeareSonnet = {
     verbs: 5,
     nouns: 10,
@@ -16,7 +18,7 @@ var shakespeareSonnet = {
     exclamations: 0,
     monsters: 0,
     clothing: 0,
-    filePath: "libs/shakespeareSonnet.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/shakespeareSonnet.txt"
+    filePath: "libs/shakespeareSonnet.txt",
     title: "SHAKESPEARE SONNET 18",
 };
 //1 household item, 4 verb, 1 adj., 2 noun, 1 article of clothing, 3 body part, 1 exclamation, 
@@ -33,7 +35,9 @@ var coolestGirl = {
     exclamations: 1,
     monsters: 0,
     clothing: 1,
-    filePath: "libs/coolestGirl.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/coolestGirl.txt"
+    names: 0,
+    companies: 0,
+    filePath: "libs/coolestGirl.txt",
     title: "How To Date the Coolest Girl in School",
 };
 var afraid = {
@@ -49,8 +53,51 @@ var afraid = {
     exclamations: 1,
     monsters: 1,
     clothing: 0,
-    filePath: "libs/afraid.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/afraid.txt"
+    names: 0,
+    companies: 0,
+    filePath: "libs/afraid.txt",
     title: "Afraid of the Dark",
+};
+
+//1 body part, 4 noun, 2 animal, 4 adj., 1 vegetable, 1 name
+var vegan = {
+    verbs: 0,
+    nouns: 4,
+    adjectives: 4,
+    bodyParts: 1,
+    locations: 0,
+    celebrities: 0,
+    livingThings: 3,
+    colors: 0,
+    householdItems: 0,
+    exclamations: 0,
+    monsters: 1,
+    clothing: 0,
+    names: 1,
+    companies: 0,
+    filePath: "libs/vegan.txt",
+    title: "Vegan Stories",
+};
+
+//7 nouns, 2 locations, 2 adj., 1 form of transportation, 2 company, 1 name, 1 job title, 1 verb-ed
+
+var starWars = {
+    verbs: 1,
+    nouns: 7,
+    adjectives: 2,
+    bodyParts: 0,
+    locations: 2,
+    celebrities: 0,
+    livingThings: 0,
+    colors: 0,
+    householdItems: 0,
+    exclamations: 0,
+    monsters: 0,
+    clothing: 0,
+    names: 1,
+    companies: 2,
+    filePath: "libs/starWars.txt", 
+    title: "Star Wars",
 };
 function createInputArray(lib){
     var inputOptionsA = [];
@@ -90,6 +137,12 @@ function createInputArray(lib){
     for (var i = 1; i <= lib.clothing; i++){
         inputOptionsA.push('<input type="text" class="form-control" placeholder="Clothing Item ' + ' ' + i + '"' + 'id="clothing' + i + '">');
     }
+    for (var i = 1; i <= lib.names; i++){
+        inputOptionsA.push('<input type="text" class="form-control" placeholder="Name ' + ' ' + i + '"' + 'id="name' + i + '">');
+    }
+    for (var i = 1; i <= lib.companies; i++){
+        inputOptionsA.push('<input type="text" class="form-control" placeholder="Company ' + ' ' + i + '"' + 'id="company' + i + '">');
+    }
     
     madLibOutput.innerHTML = '<button type="button" class="btn btn-default" onclick="outputLib()" id="outputButton">Output Lib</button>';
     ou.style.textAlign = "center";
@@ -108,7 +161,6 @@ function outputLib(){
 function onButtonClick(lib) {
     currentLib = lib;
     setInput(lib);
-    console.error(createInputArray(currentLib));
 }
 
 //document.getElementById("searchTxt").value;
@@ -158,6 +210,12 @@ function getOutput(lib){
     }
     for(var i = 1; i <= lib.clothing ; i++){
         txt = txt.replace("$clothing" + i, document.getElementById("clothing" + i).value);
+    }
+    for(var i = 1; i <= lib.names ; i++){
+        txt = txt.replace("$name" + i, document.getElementById("name" + i).value);
+    }
+    for(var i = 1; i <= lib.companies; i++){
+        txt = txt.replace("$company" + i, document.getElementById("company" + i).value);
     }
     return txt;
 }    
