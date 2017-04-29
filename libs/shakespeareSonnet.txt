@@ -1,4 +1,4 @@
-Shall I compare thee to a $adj1 $noun1 </p>
+<p>Shall I compare thee to a $adj1 $noun1 </p>
 
 <p>Thou art more $noun2 and more $adj2 </p>
 
@@ -12,7 +12,7 @@ Shall I compare thee to a $adj1 $noun1 </p>
 
 <p>And every $location2 from $location3 sometimes declines. </p>
 
-<p>By chance, or nature’s changing $noun7, un- $verb2 ed. </p>
+<p>By chance, or nature’s changing $noun7, un-$verb2ed. </p>
 
 <p>But thy eternal $noun8 shall not $verb3 </p>
 
