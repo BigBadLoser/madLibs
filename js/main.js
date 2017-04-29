@@ -17,7 +17,6 @@ var shakespeareSonnet = {
     monsters: 0,
     clothing: 0,
     filePath: "https://bigbadloser.github.io/madlibs/libs/shakespeareSonnet.txt", //"https://preview.c9users.io/bigbadloser/madlibs/libs/shakespeareSonnet.txt"
-    filePath: "htpps://bigbadloser.github.com/madLibs/libs/shakespeareSonnet.txt", //VERY IMPORTANT, CHANGE THIS BEFORE COMMITING TO GITHUB!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     title: "SHAKESPEARE SONNET 18",
 };
 //1 household item, 4 verb, 1 adj., 2 noun, 1 article of clothing, 3 body part, 1 exclamation, 
