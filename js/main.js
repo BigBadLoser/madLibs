@@ -14,9 +14,6 @@ var shakespeareSonnet = {
     colors: 1,
     filePath: "https://preview.c9users.io/bigbadloser/madlibs/libs/shakespeareSonnet.txt",
     title: "SHAKESPEARE SONNET 18",
-    getOutput: function(){
-        return "testMeDaddy";
-  }  
 };
 function createInputArray(lib){
     var inputOptionsA = [];
